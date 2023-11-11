@@ -1,6 +1,6 @@
 <template>
   <div class="login" col="12" style=" margin-left: 54%;">
-    <img src="src/assets/logo3.png" alt="image-logo" style="margin-left:19%">
+
     <form class="form">
       <!-- Email input -->
       <div class="form-outline mb-4">

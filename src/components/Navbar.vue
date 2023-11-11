@@ -1,7 +1,7 @@
 <template>
 
     <div class="container-fluid" >
-      <router-link to="/home" class="nav-link active;navbar-brand">
+      <router-link to="/home" class="nav-link active navbar-brand">
         <img src="src/assets/logo3.png" alt="image-logo" style="width: 100px; height: auto;">
 
       </router-link>
@@ -21,8 +21,8 @@
             <router-link to="/chat" class="nav-link active;navbar-brand">Chat IA</router-link>
           </li>
         </ul>
-        <span class="navbar-text">
-          <router-link to="/" class="nav-link active;navbar-brand">Exit</router-link>
+        <span class="navbar-text" >
+          <span @click="cerrarSesion">Cerrar Sesión</span>
         </span>
       </div>
     </div>
@@ -34,13 +34,27 @@
 export default {
   name: "navbar",
   created() {},
+  computed:{
+    isUserLoggedIn() {
+      return localStorage.getItem('usuario') !== null;
+    },
+  },
+  
   data() {
  
     return {};
   },
   props: {},
-  methods: {},
+  methods: {
+
+      cerrarSesion() {
+      localStorage.removeItem('usuario');
+      this.$router.push('/')
+    
+      }
+    }
 };
+
 </script>
 
 <style>

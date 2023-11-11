@@ -38,7 +38,8 @@ const router = createRouter({
     path:'/pharmacys',
     name:'pharmacys',
     component:PharmacyView
-  }
+  },
+  
     // ... other routes
   ],
 });

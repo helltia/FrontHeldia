@@ -1,27 +1,43 @@
 <template>
-   <div class="register">
-    <h1 class="title">Sign Up</h1>
-    <form action class="form" @submit.prevent="register">
-      <label class="form-label" for="#userName">User Name:</label>
-      <input>
-      <label class="form-label" for="#firstName">First Name:</label>
-      <input id="firstname"
+  <div class="login" col="12" style=" margin-left: 54%;">
+    <img src="src/assets/logo3.png" alt="image-logo" style="margin-left:19%">
+    <form class="form">
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input v-model="userName" type="text" class="form-control" id="form2Example1" placeholder="User" />
 
-      >
-      <label class="form-label" for="#lastName">Last Name:</label>
-      <input
-       >
-  <label class="form-label" for="#lastName">Password:</label>
-  <input>
-  <br>
-      <input v-on:click="createUser" class="btn btn-primary btn-block mb-4" type="submit" value="Registrate">
-      <br>
+      </div>
+
+      <!-- Password input -->
+      <div class="form-outline mb-4">
+        <input type="password" v-model="password" id="form2Example2" class="form-control" placeholder="name"/>
+
+      </div>
+
+      <div class="form-outline mb-4">
+        <input type="password" v-model="password" id="form2Example2" class="form-control" placeholder="last name"/>
+
+      </div>
+    
+      <div class="form-outline mb-4">
+        <input type="password" v-model="password" id="form2Example2" class="form-control" placeholder="password"/>
+      </div>
+
+      <!-- Submit button -->
+      <p v-if="error" class="error">Correo o contraseña incorrectos.</p>
+        <button v-on:click="confirmUser" type="button" class="btn btn-primary btn-block mb-4"
+          style="background:rgb(227,91,146);border-radius:2rem;border-color:rgb(227, 91, 146)">
+          submit
+        </button>
+
+      <!-- Register buttons -->
       <div class="text-center">
-        <p>Already have an account? <router-link to="/">Return to login</router-link></p>
+        <p><router-link to="/" style="color:rgb(227, 91, 146)">Back to login</router-link></p>
       </div>
     </form>
-  </div> 
-  <div></div>
+
+  </div>
+
 </template>
 
 <script>
@@ -32,7 +48,9 @@ export default {
     return {};
   },
   props: {},
-  methods: {},
+  methods: {
+    
+  },
 };
 </script>
 
@@ -63,7 +81,6 @@ body{
 }
 .form-label {
   margin-top: 2rem;
-  color: black;
   margin-bottom: 0.5rem;
 
 }
@@ -71,14 +88,13 @@ body{
   padding: 10px 15px;
   background: none;
   background-image: none;
-  border: 1px solid black;
-  color: black;
+  border: 1px;
+
 
 }
 .form-submit {
   background: white;
-  border: solid black;
-  color: black;
+
   margin-top: 3rem;
   padding: 1rem 0;
   cursor: pointer;

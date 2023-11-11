@@ -2,19 +2,17 @@
 
 
   <div class="login" col="12" style=" margin-left: 54%;">
-    <h1 class="title">Login</h1>
+    <img src="src/assets/logo3.png" alt="image-logo" style="margin-left:19%">
     <form class="form">
       <!-- Email input -->
       <div class="form-outline mb-4">
-        <label class="form-label" for="form2Example1">Usuario</label>
-        <input v-model="userName" type="text" class="form-control" id="form2Example1" />
+        <input v-model="userName" type="text" class="form-control" id="usuario" placeholder="User" />
 
       </div>
 
       <!-- Password input -->
       <div class="form-outline mb-4">
-        <label class="form-label" for="form2Example2">Contraseña</label>
-        <input type="password" v-model="password" id="form2Example2" class="form-control" />
+        <input type="password" v-model="password" id="password" class="form-control" placeholder="password"/>
 
       </div>
 
@@ -53,10 +51,27 @@ export default {
   name: "loginView",
   created() {},
   data() {
-    return {};
+    return {
+      userName:'',
+      inactivity:null,
+      loggedUser:false
+    
+    };
   },
   props: {},
-  methods: {},
+  methods: {
+    iniciarSesion() {
+      if (this.userName.trim() !== '') {
+        localStorage.setItem('usuario', this.userName);
+        this.inactividadTimeout = setTimeout(() => {
+          this.cerrarSesion();
+        }, 30 * 60 * 1000); 
+      }
+    },
+
+   
+  },
+    
 };
 </script>
 <style>

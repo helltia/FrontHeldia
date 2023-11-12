@@ -2,17 +2,22 @@
 
   <div class="container-fluid">
     <!-- Imagen phone.png al fondo a la derecha -->
-    <img src="../assets/phonoqr.png" alt="image" style="position: absolute; bottom: 33px; right: 20rem;height:80%">
-    <h1>Descarga nuestra APP</h1>
-    <blockquote>
-      <p>A veces los segundos pueden ser la diferencia entre la vida y la muerte, <br>por eso HelthIA es la app de primeros auxilios
-         que no puede faltar en tus aplicaciones</p>
-    </blockquote>
+    <div class="phone">
+      <img src="../assets/phonoqr.png" alt="image" style="position: absolute; bottom: 33px; right: 20rem;height:80%">
+    </div>
+    <div class="welcome">
+      <h1>¡Descarga nuestra APP!</h1>
+      <blockquote>
+        <p>A veces los segundos pueden ser la diferencia entre la vida y la muerte, <br>por eso HelthIA es la app de primeros auxilios
+          que no puede faltar en tus aplicaciones</p>
+      </blockquote>
+    
+      <button  type="button" class="btn btn-primary btn-block mb-4"
+              style="background:rgb(227,91,146);border-radius:2rem;border-color:rgb(227, 91, 146)">
+              Probar Health IA
+      </button>
+    </div>
 
-  <button  type="button" class="btn btn-primary btn-block mb-4"
-          style="background:rgb(227,91,146);border-radius:2rem;border-color:rgb(227, 91, 146)">
-          Probar Health IA
-        </button>
 
   </div>
 
@@ -53,6 +58,8 @@ export default {
   border-radius: 0; /* Bordes cuadrados */
   width: 100%;
 }
+
+
 
 
 

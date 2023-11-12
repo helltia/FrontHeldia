@@ -3,7 +3,7 @@
 
   <div class="login" col="12" style=" margin-left: 54%;">
     <img src="../assets/logo3.png" alt="image-logo" style="margin-left:19%">
-    <form class="form">
+    <form class="form-login">
       <!-- Email input -->
       <div class="form-outline mb-4">
         <input v-model="userName" type="text" class="form-control" id="usuario" placeholder="User" />
@@ -89,7 +89,7 @@ body {
 
 
 }
-.form {
+.form-login {
   margin: 3rem auto;
   display: flex;
   flex-direction: column;
@@ -97,10 +97,9 @@ body {
   width: 20%;
   min-width: 350px;
   max-width: 100%;
-  background: white;
+  background: transparent;  /* Cambiado a transparente */
   border-radius: 20px;
   padding: 12px;
-
 }
 
 .form-control{

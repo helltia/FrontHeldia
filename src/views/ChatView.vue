@@ -36,7 +36,7 @@ export default {
   methods: {
     async fetchMessages() {
       try {
-        const response = await axios.get('https://healthia.adaptable.app/users/messages/a');
+        const response = await axios.get('https://healthia.adaptable.app/users/messages/user1');
         if (response.status === 200) {
           this.chat = response.data;
         }
@@ -57,7 +57,7 @@ export default {
         }
       } catch (error) {
         console.error('Error al enviar mensaje:', error);
-        // Muestra un mensaje de error al usuario
+       
       }
     },
 

@@ -6,7 +6,7 @@
       <!-- Email input -->
       <div class="form-group">
        
-        <input v-model="userName" type="text" class="form-control" id="usuario" placeholder="Enter your username" />
+        <input v-model="username" type="text" class="form-control" id="usuario" placeholder="Enter your username" />
       </div>
 
       <!-- Password input -->
@@ -38,7 +38,7 @@ export default {
   name: "loginView",
   data() {
     return {
-      userName: '',
+      username: '',
       inactivity: null,
       loggedUser: false,
       password: '',
@@ -49,7 +49,7 @@ export default {
     async loginUser() {
       try {
         let response = await axios.post('https://healthia.adaptable.app/users/login', {
-          userName: this.userName,
+          username: this.username,
           password: this.password,
         });
         if (response.status == 200 || response.status == 201) {
@@ -69,7 +69,7 @@ export default {
 
     iniciarSesion() {
       if (this.userName.trim() !== '') {
-        localStorage.setItem('usuario', this.userName);
+        localStorage.setItem('usuario', this.username);
         this.inactividadTimeout = setTimeout(() => {
           this.cerrarSesion();
         }, 30 * 60 * 1000);

@@ -4,18 +4,18 @@
     <form class="form">
       <!-- Email input -->
       <div class="form-outline mb-4">
-        <input v-model="userName" type="text" class="form-control" id="form2Example" placeholder="User" />
+        <input v-model="username" type="text" class="form-control" id="form2Example" placeholder="User" />
 
       </div>
 
       <!-- Password input -->
       <div class="form-outline mb-4">
-        <input type="text" v-model="password" id="form2Example3" class="form-control" placeholder="name"/>
+        <input type="text" v-model="name" id="form2Example3" class="form-control" placeholder="name"/>
 
       </div>
 
       <div class="form-outline mb-4">
-        <input type="text" v-model="password" id="form2Example1" class="form-control" placeholder="last name"/>
+        <input type="text" v-model="lastname" id="form2Example1" class="form-control" placeholder="last name"/>
 
       </div>
 
@@ -41,15 +41,43 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
+  
   name: "registerView",
   created() {},
   data() {
-    return {};
+    return {
+      name:'',
+      password:'',
+      lastname:'',
+      username:'',
+      error:false
+    };
   },
   props: {},
   methods: {
-
+   async registerUser(){
+    try{
+  const url = 'https:nosecomosellama.com'
+        const request = await axios.post(url,{
+          name : this.name,
+          password : this.password,
+          lastname: this.lastname,
+          username:this.username,
+          error:this.error
+        })
+          
+        if(request === request.status(200)|| request.status(201)){
+          await router.push('/');
+        }else(
+         this.error.true
+        )
+    }catch(err){
+      this.err = true
+    }
+      
+    }
   },
 };
 </script>

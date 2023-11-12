@@ -1,6 +1,6 @@
 <template>
   <div class="login" col="12" style=" margin-left: 54%;">
-    <img src="src/assets/logo3.png" alt="image-logo" style="margin-left:19%">
+    <img src="../assets/logo3.png" alt="image-logo" style="margin-left:19%">
     <form class="form">
       <!-- Email input -->
       <div class="form-outline mb-4">
@@ -18,7 +18,7 @@
         <input type="password" v-model="password" id="form2Example2" class="form-control" placeholder="last name"/>
 
       </div>
-    
+
       <div class="form-outline mb-4">
         <input type="password" v-model="password" id="form2Example2" class="form-control" placeholder="password"/>
       </div>
@@ -49,7 +49,7 @@ export default {
   },
   props: {},
   methods: {
-    
+
   },
 };
 </script>

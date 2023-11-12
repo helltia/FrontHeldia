@@ -2,7 +2,7 @@
 
 
   <div class="login" col="12" style=" margin-left: 54%;">
-    <img src="src/assets/logo3.png" alt="image-logo" style="margin-left:19%">
+    <img src="../assets/logo3.png" alt="image-logo" style="margin-left:19%">
     <form class="form">
       <!-- Email input -->
       <div class="form-outline mb-4">
@@ -32,7 +32,7 @@
       <div class="text-center">
         <p><router-link to="/register" style="color:rgb(227, 91, 146)">Create an account</router-link></p>
        <p><router-link to="/register" style="color:rgb(227, 91, 146)">Forgot your password</router-link></p>
-    
+
       </div>
     </form>
 
@@ -42,8 +42,8 @@
 
 
 
-  
- 
+
+
 </template>
 
 <script>
@@ -55,7 +55,7 @@ export default {
       userName:'',
       inactivity:null,
       loggedUser:false
-    
+
     };
   },
   props: {},
@@ -65,13 +65,13 @@ export default {
         localStorage.setItem('usuario', this.userName);
         this.inactividadTimeout = setTimeout(() => {
           this.cerrarSesion();
-        }, 30 * 60 * 1000); 
+        }, 30 * 60 * 1000);
       }
     },
 
-   
+
   },
-    
+
 };
 </script>
 <style>
@@ -87,7 +87,7 @@ body {
   color: rgb(211, 90, 186);
   font-family: sans-serif;
 
-  
+
 }
 .form {
   margin: 3rem auto;
@@ -99,7 +99,7 @@ body {
   max-width: 100%;
   background: white;
   border-radius: 20px;
-  padding: 12px; 
+  padding: 12px;
 
 }
 

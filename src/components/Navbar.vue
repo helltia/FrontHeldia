@@ -2,7 +2,7 @@
 
     <div class="container-fluid" >
       <router-link to="/home" class="nav-link active navbar-brand">
-        <img src="src/assets/logo3.png" alt="image-logo" style="width: 100px; height: auto;">
+        <img src="../assets/logo3.png" alt="image-logo" style="width: 100px; height: auto;">
 
       </router-link>
 
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-  
+
 </template>
 
 <script>
@@ -39,9 +39,9 @@ export default {
       return localStorage.getItem('usuario') !== null;
     },
   },
-  
+
   data() {
- 
+
     return {};
   },
   props: {},
@@ -50,7 +50,7 @@ export default {
       cerrarSesion() {
       localStorage.removeItem('usuario');
       this.$router.push('/')
-    
+
       }
     }
 };

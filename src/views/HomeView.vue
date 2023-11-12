@@ -2,8 +2,8 @@
 
   <div class="container-fluid">
     <!-- Imagen phone.png al fondo a la derecha -->
-
-    <h1>Descarga nuestra App!</h1>
+    <img src="src/assets/phonoqr.png" alt="image" style="position: absolute; bottom: 33px; right: 20rem;height:80%">
+    <h1>Descarga nuestra APP</h1>
     <blockquote>
       <p>A veces los segundos pueden ser la diferencia entre la vida y la muerte, <br>por eso HelthIA es la app de primeros auxilios
          que no puede faltar en tus aplicaciones</p>

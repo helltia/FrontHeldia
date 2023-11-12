@@ -32,7 +32,11 @@ export default {
     return {};
   },
   props: {},
-  methods: {},
+  methods: {
+    async message(){
+      
+    }
+  },
 };
 </script>
 

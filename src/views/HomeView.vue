@@ -1,22 +1,25 @@
 <template>
+  <div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
+    <img src="../assets/imageBack.png" alt="background-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;">
 
-  <div class="container-fluid">
-    <!-- Imagen phone.png al fondo a la derecha -->
-    <img src="../assets/phonoqr.png" alt="image" style="position: absolute; bottom: 33px; right: 20rem;height:80%">
-    <h1>Descarga nuestra APP</h1>
-    <blockquote>
-      <p>A veces los segundos pueden ser la diferencia entre la vida y la muerte, <br>por eso HelthIA es la app de primeros auxilios
-         que no puede faltar en tus aplicaciones</p>
-    </blockquote>
+    <!-- Contenedor para el texto y el título -->
+    <div class="text-center">
+      <h1 class="display-4">Descarga nuestra App!</h1>
+      <blockquote class="blockquote">
+        <p class="lead">A veces los segundos pueden ser la diferencia entre la vida y la muerte, <br>por eso HealthIA es la app de primeros auxilios que no puede faltar en tus aplicaciones</p>
+      </blockquote>
+      
+      <a href="https://drive.google.com/file/d/175Tyevsjh9QMYIJlCRekyxa_BLNscJGm/view?usp=sharing" class="btn btn-primary btn-block mb-4" style="font-size: 1.25rem; background: rgb(227, 91, 146); border-radius: 2rem; border-color: rgb(227, 91, 146)">
+        Probar Health IA
+      </a>
+      
+    </div>
 
-  <button  type="button" class="btn btn-primary btn-block mb-4"
-          style="background:rgb(227,91,146);border-radius:2rem;border-color:rgb(227, 91, 146)">
-          Probar Health IA
-        </button>
-
+    <!-- Contenedor para la imagen -->
+    <div class="align-items">
+      <img src="../assets/phonoqr.png" alt="image" class="phone-image img-fluid mt-4" style="max-width: 170%; height: auto;margin-left:103%">
+    </div>
   </div>
-
-
 </template>
 
 <script>
@@ -31,29 +34,8 @@ export default {
 };
 </script>
 
-<style >
-.chat-history {
-  background-color: #e9ecef; /* Color de fondo del historial del chat */
-  padding: 15px;
-  border-radius: 10px;
-  overflow-y: auto; /* Hace que el historial tenga un desplazamiento vertical si hay demasiados mensajes */
-  max-height: 300px;
-}
-
-.input-row {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #f8f9fa; /* Puedes ajustar el color de fondo según tu preferencia */
-  padding: 10px;
-}
-
-.input-message {
-  border-radius: 0; /* Bordes cuadrados */
-  width: 100%;
-}
-
-
-
+<style>
+  .lead{
+   font-size: xx-large; 
+  }
 </style>

@@ -4,23 +4,23 @@
     <form class="form">
       <!-- Email input -->
       <div class="form-outline mb-4">
-        <input v-model="userName" type="text" class="form-control" id="form2Example1" placeholder="User" />
+        <input v-model="userName" type="text" class="form-control" id="form2Example" placeholder="User" />
 
       </div>
 
       <!-- Password input -->
       <div class="form-outline mb-4">
-        <input type="password" v-model="password" id="form2Example2" class="form-control" placeholder="name"/>
+        <input type="text" v-model="password" id="form2Example3" class="form-control" placeholder="name"/>
 
       </div>
 
       <div class="form-outline mb-4">
-        <input type="password" v-model="password" id="form2Example2" class="form-control" placeholder="last name"/>
+        <input type="text" v-model="password" id="form2Example1" class="form-control" placeholder="last name"/>
 
       </div>
 
       <div class="form-outline mb-4">
-        <input type="password" v-model="password" id="form2Example2" class="form-control" placeholder="password"/>
+        <input type="password" v-model="password" id="form2Example4" class="form-control" placeholder="password"/>
       </div>
 
       <!-- Submit button -->
@@ -35,7 +35,7 @@
         <p><router-link to="/" style="color:rgb(227, 91, 146)">Back to login</router-link></p>
       </div>
     </form>
-
+    <img src="../assets/imageBack.png" alt="background-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;">
   </div>
 
 </template>

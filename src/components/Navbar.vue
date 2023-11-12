@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: "navbar",
+  name: "Navbar",
   created() {},
   computed:{
     isUserLoggedIn() {

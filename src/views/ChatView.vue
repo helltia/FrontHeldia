@@ -36,7 +36,7 @@ export default {
   methods: {
     async fetchMessages() {
       try {
-        const response = await axios.get('https://healthia.adaptable.app/users/messages/user1');
+        const response = await axios.get(`https://healthia.adaptable.app/users/messages/${user1}`);
         if (response.status === 200) {
           this.chat = response.data;
         }
